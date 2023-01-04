@@ -4,11 +4,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # archives
-    zip
-    unzip
-    unrar
-
     # office
     libreoffice
 
@@ -19,7 +14,6 @@
     qbittorrent
 
     # misc
-    libnotify
     vim
 
     # audio
