@@ -11,6 +11,7 @@
     ./flatpak.nix
     ./packages.nix
     ./xdg.nix
+    ./yubikey.nix
   ];
 
   programs = {
