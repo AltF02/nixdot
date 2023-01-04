@@ -1,5 +1,10 @@
 # security tweaks borrowed from @hlissner
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   boot.kernel.sysctl = {
     # The Magic SysRq key is a key combo that allows users connected to the
     # system console of a Linux kernel to perform some low-level commands.
@@ -40,5 +45,39 @@
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.default_qdisc" = "cake";
   };
+
+  environment.memoryAllocator.provider = lib.mkDefault "scudo";
+  environment.variables.SCUDO_OPTIONS = lib.mkDefault "ZeroContents=1";
+
+  boot.blacklistedKernelModules = [
+    # Obscure network protocols
+    "ax25"
+    "netrom"
+    "rose"
+
+    # Old or rare or insufficiently audited filesystems
+    "adfs"
+    "affs"
+    "bfs"
+    "befs"
+    "cramfs"
+    "efs"
+    "erofs"
+    "exofs"
+    "freevxfs"
+    "f2fs"
+    "hfs"
+    "hpfs"
+    "jfs"
+    "minix"
+    "nilfs2"
+    "ntfs"
+    "omfs"
+    "qnx4"
+    "qnx6"
+    "sysv"
+    "ufs"
+  ];
+
   boot.kernelModules = ["tcp_bbr"];
 }

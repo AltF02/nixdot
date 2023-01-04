@@ -14,6 +14,7 @@
       modules =
         [
           ./saturn
+          ../modules/doas.nix
           ../modules/gnome.nix
           ../modules/desktop.nix
           ../modules/xserver.nix
