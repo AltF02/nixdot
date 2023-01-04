@@ -64,13 +64,10 @@
     fstrim.enable = true;
 
     # see https://github.com/fufexan/nix-gaming/#pipewire-low-latency
-    pipewire.lowLatency.enable = true;
+    # pipewire.lowLatency.enable = true;
 
     printing.enable = true;
 
     xserver.videoDrivers = [ "nvidia" ];
   };
-
-  # https://github.com/NixOS/nixpkgs/issues/114222
-  systemd.user.services.telephony_client.enable = false;
 }
