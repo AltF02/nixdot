@@ -67,6 +67,8 @@
     pipewire.lowLatency.enable = true;
 
     printing.enable = true;
+
+    xserver.videoDrivers = [ "nvidia" ];
   };
 
   # https://github.com/NixOS/nixpkgs/issues/114222
