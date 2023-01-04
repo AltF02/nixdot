@@ -46,10 +46,6 @@
 
   networking = {
     hostName = "saturn";
-    firewall = {
-      allowedTCPPorts = [];
-      allowedUDPPorts = [];
-    };
   };
 
   programs = {

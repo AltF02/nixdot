@@ -26,7 +26,6 @@
     networkmanager = {
       enable = true;
       dns = "systemd-resolved";
-      wifi.powersave = true;
     };
   };
 
@@ -76,13 +75,6 @@
 
   # don't touch this
   system.stateVersion = lib.mkDefault "22.11";
-
-  # Don't wait for network startup
-  # https://old.reddit.com/r/NixOS/comments/vdz86j/how_to_remove_boot_dependency_on_network_for_a
-  systemd = {
-    targets.network-online.wantedBy = pkgs.lib.mkForce []; # Normally ["multi-user.target"]
-    services.NetworkManager-wait-online.wantedBy = pkgs.lib.mkForce []; # Normally ["network-online.target"]
-  };
 
   time.timeZone = lib.mkDefault "Europe/Amsterdam";
 
