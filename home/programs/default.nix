@@ -8,6 +8,7 @@
     ../shell/nix.nix
     ./files
     ./git.nix
+    ./gtk.nix
     ./flatpak.nix
     ./packages.nix
     ./xdg.nix
