@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   services = {
     pcscd.enable = true;
-    udev.packages = [yubikey-personalization];
+    udev.packages = [pkgs.yubikey-personalization];
   };
 
   home.packages = with pkgs; [
