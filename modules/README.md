@@ -6,7 +6,6 @@ Name           | Description
 -------------- | -----------
 `default.nix`  | Flake-parts module
 Desktop        | Config aimed at desktop usage
-Gamemode       | Gamemode settings
 Gnome          | GNOME config
 Minimal        | Shared configuration
 Nix            | Nix-related options
