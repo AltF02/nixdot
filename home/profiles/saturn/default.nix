@@ -11,7 +11,7 @@
       cursorShape = "ibeam";
       customCommand = "zsh";
       default = true;
-      font = "MesloLGS NF";
+      font = "MesloLGS NF 10";
       loginShell = true;
       visibleName = "p10k";
     };

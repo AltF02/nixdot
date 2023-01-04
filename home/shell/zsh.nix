@@ -13,7 +13,7 @@
     dotDir = ".config/zsh";
     history = {
       expireDuplicatesFirst = true;
-      path = ".config/zsh/history";
+      path = ".config/zsh/.zsh_history";
     };
 
     plugins = [
