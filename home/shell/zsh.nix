@@ -5,7 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    zsh-autosuggestions
+    zsh-powerlevel10k
     zsh-you-should-use
   ];
 
@@ -30,7 +30,7 @@
     ];
     oh-my-zsh = {
       enable = true;
-      plugins= [ git kubectl zsh-autosuggestions zsh-you-should-use ];
+      plugins= [ "git" "kubectl" "zsh-you-should-use" ];
       theme = "powerlevel10k/powerlevel10k";
     };
 

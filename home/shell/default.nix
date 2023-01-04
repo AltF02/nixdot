@@ -4,7 +4,10 @@
   cache = config.xdg.cacheHome;
 in {
   imports = [
+    ./cli.nix
+    ./starship.nix
     ./transient-services.nix
+    ./zsh.nix
   ];
 
   # add environment variables
