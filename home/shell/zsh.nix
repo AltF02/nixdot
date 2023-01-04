@@ -10,10 +10,10 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     autocd = true;
-    dotDir = "${config.xdg.homeDirectory}.config/zsh";
+    dotDir = "${config.home.homeDirectory}.config/zsh";
     history = {
       expireDuplicatesFirst = true;
-      path = "${config.xdg.homeDirectory}.config/zsh/.zsh_history";
+      path = "${config.home.homeDirectory}.config/zsh/.zsh_history";
     };
 
     plugins = [
