@@ -1,3 +1,40 @@
-# Nix Flake
-###
-Heavy inspiration from https://github.com/fufexan/dotfiles
+<h1 align="center">AltF02/dotnix</h1>
+
+# 🗒 About
+
+In-house baked configs for Home-Manager and NixOS. Borrowed bits sprinkled on
+top. Using [flakes](https://nixos.wiki/wiki/Flakes) and
+[flake-parts](https://github.com/hercules-ci/flake-parts).
+
+See an overview of the flake outputs by running
+`nix flake show github:altf02/dotnix`.
+
+## 🗃️  Contents
+
+- [modules](modules): NixOS common configs
+- [hosts](hosts): host-specific configuration
+- [home](home): my [Home Manager](https://github.com/nix-community/home-manager) config
+- [lib](lib): helper functions
+- [pkgs](pkgs): package definitions
+
+# 💾 Resources
+
+Other configurations from where I learned and copied:
+
+- [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
+- [dmadisetti/.dots](https://github.com/dmadisetti/.dots)
+- [colemickens/nixcfg](https://github.com/colemickens/nixcfg)
+- [flake-utils-plus](https://github.com/gytis-ivaskevicius/flake-utils-plus)
+- [gytis-ivaskevicius/nixfiles](https://github.com/gytis-ivaskevicius/nixfiles)
+- [Mic92/dotfiles](https://github.com/Mic92/dotfiles)
+- [NobbZ/nixos-config](https://github.com/NobbZ/nixos-config)
+- [privatevoid-net/privatevoid-infrastructure](https://github.com/privatevoid-net/privatevoid-infrastructure)
+- [viperML/dotfiles](https://github.com/viperML/dotfiles)
+
+# 👥 People
+
+These are the people whom I've taken inspiration from while writing these
+configs. There surely are more but I tend to forget. Regardless, I am thankful
+to all of them.
+
+Mihai Fufezan - Dylan Madisetti 
