@@ -52,15 +52,6 @@
   security.sudo.wheelNeedsPassword = false;
 
   services = {
-    # network discovery, mDNS
-    avahi = {
-      enable = true;
-      nssmdns = true;
-      publish.enable = true;
-      publish.domain = true;
-      publish.userServices = true;
-    };
-
     openssh = {
       enable = true;
       useDns = true;
