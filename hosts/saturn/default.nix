@@ -68,6 +68,6 @@
 
     printing.enable = true;
 
-    xserver.videoDrivers = [ "nvidia" ];
+    xserver.videoDrivers = ["nvidia"];
   };
 }
