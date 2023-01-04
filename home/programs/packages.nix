@@ -24,6 +24,11 @@
     # audio
     easyeffects
 
+    # programming
+    jetbrains.clion
+    jetbrains.rider
+    jetbrains.webstorm
+
     # productivity
     obsidian
   ];
