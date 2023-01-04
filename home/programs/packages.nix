@@ -4,6 +4,9 @@
   ...
 }: {
   home.packages = with pkgs; [
+    # RIIR
+    (pkgs.uutils-coreutils.override { prefix = ""; })
+
     # archives
     zip
     unzip

@@ -7,7 +7,6 @@
 {
   environment.systemPackages = with pkgs.gnome; [
     gnome-tweaks
-    gnome-terminal
   ];
 
   environment.gnome.excludePackages = with pkgs; [
