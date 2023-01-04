@@ -10,7 +10,7 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     autocd = true;
-    dotDir = "${config.home.homeDirectory}/.config/zsh";
+    dotDir = ".config/zsh";
     history = {
       expireDuplicatesFirst = true;
       path = "${config.home.homeDirectory}/.config/zsh/.zsh_history";
