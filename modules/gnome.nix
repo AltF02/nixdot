@@ -5,8 +5,9 @@
 }:
 # GNOME 43 config
 {
-  environment.systemPackages = with pkgs.gnome; [
-    gnome-tweaks
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.dash-to-dock
+    gnome.gnome-tweaks
   ];
 
   environment.gnome.excludePackages = with pkgs; [
