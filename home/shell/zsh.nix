@@ -15,6 +15,11 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     autocd = true;
+    dotDir = ".config/zsh";
+    history = {
+      expireDuplicatesFirst = true;
+      path = "${config.xdg.dataHome}/zsh_history";
+    };
 
     plugins = [
       {
@@ -31,6 +36,7 @@
 
     shellAliases = {
       cat = "bat -pp";
+      upd = "sudo nixos-rebuild switch --upgrade";
     };
     shellGlobalAliases = {exa = "exa --icons --git";};
   };
