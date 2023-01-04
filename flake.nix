@@ -66,7 +66,5 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "fu";
     };
-
-    webcord.url = "github:fufexan/webcord-flake";
   };
 }
