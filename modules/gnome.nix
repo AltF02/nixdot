@@ -5,8 +5,14 @@
 }:
 # GNOME 43 config
 {
-  environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+  environment.systemPackages = with pkgs.gnome; [
+    gnome-tweaks
+    gnome-terminal
+  ];
+
+  environment.gnome.excludePackages = with pkgs; [
+    gnome.cheese
+    gnome-console
   ];
 
   # we're using pipewire instead

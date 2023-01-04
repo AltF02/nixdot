@@ -5,6 +5,7 @@
   ...
 }: {
   fonts = {
+    fonts = with pkgs; [meslo-lgs-nf];
     fontDir.enable = true;
   };
 

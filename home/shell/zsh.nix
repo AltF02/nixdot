@@ -4,11 +4,6 @@
   lib,
   ...
 }: {
-  home.packages = with pkgs; [
-    zsh-powerlevel10k
-    zsh-you-should-use
-  ];
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -27,10 +22,14 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+      {
+        name = "zsh-you-should-use";
+        src = pkgs.zsh-you-should-use;
+      }
     ];
     oh-my-zsh = {
       enable = true;
-      plugins= [ "git" "kubectl" "zsh-you-should-use" ];
+      plugins = ["git" "kubectl" "zsh-you-should-use"];
       theme = "powerlevel10k/powerlevel10k";
     };
 
