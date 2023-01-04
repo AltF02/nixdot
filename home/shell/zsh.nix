@@ -15,7 +15,6 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     autocd = true;
-    dotDir = ".config/zsh";
 
     plugins = [
       {
