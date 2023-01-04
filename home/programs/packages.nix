@@ -21,6 +21,9 @@
     # misc
     libnotify
 
+    # audio
+    easyeffects
+
     # productivity
     obsidian
   ];
