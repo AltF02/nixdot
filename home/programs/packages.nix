@@ -20,6 +20,7 @@
 
     # misc
     libnotify
+    vim
 
     # audio
     easyeffects
