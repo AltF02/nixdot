@@ -78,6 +78,7 @@
 
   users.users.matt = {
     isNormalUser = true;
+    description = "Matt";
     shell = pkgs.zsh;
     extraGroups = ["adbusers" "input" "libvirtd" "networkmanager" "plugdev" "transmission" "video" "wheel"];
   };

@@ -25,6 +25,7 @@
       {
         name = "you-should-use";
         src = pkgs.zsh-you-should-use;
+        file = "share/zsh/plugins/you-should-use/you-should-use.plugin.zsh";
       }
     ];
     oh-my-zsh = {
