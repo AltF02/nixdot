@@ -10,6 +10,7 @@
     "application/x-extension-xhtml" = browser;
     "application/xhtml+xml" = browser;
     "text/html" = browser;
+    "text/plain" = "org.gnome.TextEditor.desktop";
     "x-scheme-handler/about" = browser;
     "x-scheme-handler/ftp" = browser;
     "x-scheme-handler/http" = browser;
