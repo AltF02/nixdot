@@ -9,7 +9,11 @@ top. Using [flakes](https://nixos.wiki/wiki/Flakes) and
 See an overview of the flake outputs by running
 `nix flake show github:altf02/dotnix`.
 
-## 🗃️  Contents
+## ⚠ Warning
+
+> This is a private configuration. I make no guarantees that it will wor for anyone but myself. It might change swiftly and randomly without any warning
+
+## 🗃️ Contents
 
 - [modules](modules): NixOS common configs
 - [hosts](hosts): host-specific configuration
@@ -30,6 +34,8 @@ Other configurations from where I learned and copied:
 - [NobbZ/nixos-config](https://github.com/NobbZ/nixos-config)
 - [privatevoid-net/privatevoid-infrastructure](https://github.com/privatevoid-net/privatevoid-infrastructure)
 - [viperML/dotfiles](https://github.com/viperML/dotfiles)
+
+
 
 # 👥 People
 
