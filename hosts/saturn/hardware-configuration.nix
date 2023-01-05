@@ -20,7 +20,7 @@
   fileSystems."/" = {
     device = "none";
     fsType = "tmpfs";
-    options = ["defaults" "size=4G" "mode=755"];
+    options = ["defaults" "size=2G" "mode=755"];
   };
 
   fileSystems."/boot" = {
@@ -28,42 +28,42 @@
     fsType = "vfat";
   };
 
+  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/1168c941-c120-4b93-952e-2d50e4c80aa1";
+
   fileSystems."/nix" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=nix"];
+    options = ["subvol=nix" "compress-force=zstd" "noatime"];
   };
-
-  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/1168c941-c120-4b93-952e-2d50e4c80aa1";
 
   fileSystems."/etc" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=etc"];
+    options = ["subvol=etc" "compress-force=zstd" "noatime"];
   };
 
   fileSystems."/var/log" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=log"];
-  };
-
-  fileSystems."/root" = {
-    device = "/dev/mapper/nixos";
-    fsType = "btrfs";
-    options = ["subvol=root"];
-  };
-
-  fileSystems."/home" = {
-    device = "/dev/mapper/nixos";
-    fsType = "btrfs";
-    options = ["subvol=home"];
+    options = ["subvol=log" "compress-force=zstd" "noatime"];
   };
 
   fileSystems."/var/lib" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=lib"];
+    options = ["subvol=lib" "compress-force=zstd" "noatime"];
+  };
+
+  fileSystems."/root" = {
+    device = "/dev/mapper/nixos";
+    fsType = "btrfs";
+    options = ["subvol=root" "compress-force=zstd" "noatime"];
+  };
+
+  fileSystems."/home" = {
+    device = "/dev/mapper/nixos";
+    fsType = "btrfs";
+    options = ["subvol=home" "compress-force=zstd"];
   };
 
   swapDevices = [
