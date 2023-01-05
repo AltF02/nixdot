@@ -16,7 +16,7 @@
     kernelModules = ["kvm-amd"];
 
     # use latest kernel
-    kernelPackages = pkgs.linuxPackages_6_1;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     loader = {
       # systemd-boot on UEFI
