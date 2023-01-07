@@ -1,4 +1,4 @@
-{config, ...}: let
+{config, pkgs, ...}: let
   browser = ["firefox.desktop"];
 
   # XDG MIME types
@@ -20,6 +20,8 @@
     "application/json" = browser;
   };
 in {
+  home.packages = [pkgs.xdg-desktop-portal-gtk]; 
+
   xdg = {
     enable = true;
     cacheHome = config.home.homeDirectory + "/.local/cache";
