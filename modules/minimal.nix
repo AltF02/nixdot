@@ -77,7 +77,7 @@
     isNormalUser = true;
     description = "Matt";
     shell = pkgs.zsh;
-    extraGroups = ["adbusers" "input" "libvirtd" "networkmanager" "plugdev" "transmission" "video" "wheel"];
+    extraGroups = ["adbusers" "input" "libvirtd" "networkmanager" "plugdev" "video" "wheel"];
   };
 
   # compresses half the ram for use as swap
