@@ -25,7 +25,7 @@
 
     networkmanager = {
       enable = true;
-      dns = "systemd-resolved";
+      # dns = "systemd-resolved";
     };
   };
 
@@ -55,7 +55,7 @@
     };
 
     # DNS resolver
-    resolved.enable = true;
+    # resolved.enable = true;
 
     # inter-machine VPN
     tailscale.enable = true;
