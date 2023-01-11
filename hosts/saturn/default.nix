@@ -36,7 +36,7 @@
 
     nvidia = {
       # use beta drivers
-      #package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       # required for wayland
       modesetting.enable = true;
     };
