@@ -57,9 +57,8 @@
 
     # needed for GNOME services outside of GNOME Desktop
     dbus.packages = [pkgs.gcr];
-    udev.packages = with pkgs; [gnome.gnome-settings-daemon yubikey-personalization];
+    udev.packages = with pkgs; [gnome.gnome-settings-daemon];
 
-    pcscd.enable = true;
     flatpak.enable = true;
   };
 

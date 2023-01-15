@@ -18,6 +18,7 @@
           ../modules/gnome.nix
           ../modules/desktop.nix
           ../modules/xserver.nix
+          ../modules/yubikey.nix
           {home-manager.users.matt.imports = homeImports."matt@saturn";}
         ]
         ++ sharedModules
