@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.gh];
+  home.packages = [pkgs.gh pkgs.git-lfs];
 
   programs.git = {
     enable = true;
