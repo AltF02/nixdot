@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1673808507,
-        "narHash": "sha256-pU8w8auLGaFy0CqjZO7IKiUHsysp5kq7yB947KBtEQs=",
+        "lastModified": 1673808563,
+        "narHash": "sha256-8LKp11U5Eq0Kl52p6wd8oqOxE39o8CvaweFB61Xoh0E=",
         "ref": "main",
-        "rev": "853e99215711a9f26fc30fec38d636e3a61ec9e4",
-        "revCount": 12,
+        "rev": "22d2245e86d93c1dc68637149d7f1bc4e6eecbca",
+        "revCount": 13,
         "type": "git",
         "url": "https://codeberg.org/matthew/nix-catppuccin.git"
       },
