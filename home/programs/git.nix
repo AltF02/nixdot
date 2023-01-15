@@ -7,7 +7,7 @@
     ignores = ["*~" "*.swp" "*result*" ".direnv" "node_modules"];
 
     signing = {
-      key = "235DC1577188A5E4";
+      key = "0x235DC1577188A5E4";
       signByDefault = true;
     };
 

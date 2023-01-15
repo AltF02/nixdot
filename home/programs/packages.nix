@@ -26,7 +26,7 @@
 
     # productivity
     obsidian
-	
+
     # mail
     hydroxide
     thunderbird
