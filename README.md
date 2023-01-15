@@ -1,4 +1,4 @@
-<h1 align="center">AltF02/dotnix</h1>
+<h1 align="center">Matthew/nixdot</h1>
 
 # 🗒 About
 
@@ -7,7 +7,7 @@ top. Using [flakes](https://nixos.wiki/wiki/Flakes) and
 [flake-parts](https://github.com/hercules-ci/flake-parts).
 
 See an overview of the flake outputs by running
-`nix flake show github:altf02/dotnix`.
+`nix flake show codeberg.org:Matthew/nixdot`.
 
 ## ⚠ Warning
 
@@ -34,7 +34,7 @@ Other configurations from where I learned and copied:
 - [NobbZ/nixos-config](https://github.com/NobbZ/nixos-config)
 - [privatevoid-net/privatevoid-infrastructure](https://github.com/privatevoid-net/privatevoid-infrastructure)
 - [viperML/dotfiles](https://github.com/viperML/dotfiles)
-
+- [totoroot/dotfiles](https://codeberg.org/totoroot/dotfiles)
 
 
 # 👥 People
