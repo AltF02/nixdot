@@ -11,12 +11,15 @@
     module_args
   ];
 
+  desktopModules = with inputs; [
+    catppuccin.nixosModules.default
+  ];
+
   homeImports = {
     "matt@saturn" =
-      [
-        ./saturn
-      ]
-      ++ sharedModules;
+      sharedModules
+      ++ desktopModules
+      ++ [./saturn];
   };
 
   inherit (inputs.hm.lib) homeManagerConfiguration;

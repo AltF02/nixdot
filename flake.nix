@@ -9,7 +9,6 @@
         ./home/profiles
         ./hosts
         ./modules
-        ./pkgs
         ./lib
         {config._module.args._inputs = inputs // {inherit (inputs) self;};}
       ];
@@ -22,12 +21,6 @@
         system,
         ...
       }: {
-        imports = [
-          {
-            _module.args.pkgs = inputs.self.legacyPackages.${system};
-          }
-        ];
-
         devShells.default = inputs'.devshell.legacyPackages.mkShell {
           packages = [
             pkgs.alejandra
@@ -49,8 +42,6 @@
 
     fu.url = "github:numtide/flake-utils";
 
-    helix.url = "github:SoraTenshi/helix/experimental-22.12";
-
     hm = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,15 +51,14 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
+    catppuccin = {
+      url = "git+https://codeberg.org/matthew/nix-catppuccin.git?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "fu";
     };
   };
 }
