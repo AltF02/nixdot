@@ -42,6 +42,8 @@
 
     fu.url = "github:numtide/flake-utils";
 
+    helix.url = "github:SoraTenshi/helix/experimental-22.12";
+
     hm = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
