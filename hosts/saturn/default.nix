@@ -24,7 +24,7 @@
         efiSysMountPoint = "/boot";
       };
       grub = {
-        devices = [ "nodev" ];
+        devices = [ fileSystems."/boot".device ];
         enable = true;
         efiSupport = true;
         version = 2;
