@@ -6,5 +6,5 @@
     ../../terminals/gnome-terminal.nix
   ];
 
-  catppuccin.theme = "mocha";
+  catppuccin.palette = "mocha";
 }

@@ -12,7 +12,7 @@
   ];
 
   desktopModules = with inputs; [
-    catppuccin.nixosModules.default
+    catppuccin.desktopModules.default
   ];
 
   homeImports = {
