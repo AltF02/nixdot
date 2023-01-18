@@ -28,6 +28,7 @@ in {
 
         desktopModules = with inputs; [
           nix-gaming.nixosModules.default
+          catppuccin.nixosModules.default
         ];
       };
     }

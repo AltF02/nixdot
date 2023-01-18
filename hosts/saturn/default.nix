@@ -19,9 +19,17 @@
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     loader = {
-      # systemd-boot on UEFI
-      efi.canTouchEfiVariables = true;
-      systemd-boot.enable = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+      grub = {
+        devices = [ "nodev" ];
+        enable = true;
+        efiSupport = true;
+        version = 2;
+        useOSProber = true;
+      };
     };
   };
 
