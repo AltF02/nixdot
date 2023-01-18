@@ -24,6 +24,10 @@
     jetbrains.rider
     jetbrains.webstorm
 
+    # compilers
+    rustup
+    clang 
+
     # productivity
     obsidian
 
