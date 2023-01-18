@@ -3,6 +3,14 @@
   config,
   ...
 }: {
+  home.pointerCursor = {
+    package = pkgs.pkgs.catppuccin-cursors.mochaDark;
+    name = "Catppuccin-Mocha-Dark-Cursors";
+    size = 10;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   gtk = {
     enable = true;
 

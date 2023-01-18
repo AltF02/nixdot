@@ -24,8 +24,6 @@
     "application/json" = browser;
   };
 in {
-  home.packages = [pkgs.xdg-desktop-portal-gtk];
-
   xdg = {
     enable = true;
     cacheHome = config.home.homeDirectory + "/.local/cache";

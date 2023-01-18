@@ -35,6 +35,8 @@ Other configurations from where I learned and copied:
 - [privatevoid-net/privatevoid-infrastructure](https://github.com/privatevoid-net/privatevoid-infrastructure)
 - [viperML/dotfiles](https://github.com/viperML/dotfiles)
 - [totoroot/dotfiles](https://codeberg.org/totoroot/dotfiles)
+- [AmitGolden/dotfiles](https://github.com/AmitGolden/dotfiles)
+- [konradmalik/dotfiles](https://github.com/konradmalik/dotfiles)
 
 
 # 👥 People

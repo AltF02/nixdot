@@ -7,6 +7,28 @@
 }:
 # Wayland config
 {
+  imports = [
+    ../programs/waybar.nix
+    ./hyprland
+  ];
+
+  home.packages = with pkgs; [
+    # screenshot
+    grim
+    slurp
+
+    # idle/lock
+    swaybg
+
+    # utils
+    ocrScript
+    wf-recorder
+    wl-clipboard
+    wlogout
+    wlr-randr
+    wofi
+  ];
+
   # make stuff work on wayland
   #home.sessionVariables = {
   #  _JAVA_AWT_WM_NONREPARENTING = "1";

@@ -1,0 +1,236 @@
+{
+  config,
+  pkgs,
+  default,
+  ...
+}: let
+  inherit (default) colors;
+
+  pointer = config.home.pointerCursor;
+
+  emoji = "${pkgs.wofi-emoji}/bin/wofi-emoji";
+  launcher = "wofi";
+in {
+  wayland.windowManager.hyprland.extraConfig = ''
+    # scale apps
+    exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+    exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+    exec-once=wlsunset -S 6:00 -s 18:30
+    exec-once=waybar
+    exec-once=blueman-applet
+    exec-once=dunst
+    exec-once=udev-block-notify
+    exec-once=${config.xdg.configHome}/hypr/scripts/sleep.sh
+    exec-once=echo us > /tmp/kb_layout
+    exec-once=hyprctl setcursor ${pointer.name} ${toString pointer.size}
+
+    input {
+        kb_layout=us
+        kb_variant=
+        kb_model=
+        kb_options=
+        kb_rules=
+
+        follow_mouse=1
+        float_switch_override_focus=true
+
+        touchpad {
+            natural_scroll=yes
+        }
+    }
+
+    general {
+        sensitivity=1.0 # for mouse cursor
+        main_mod=SUPER
+        layout=dwindle
+
+        gaps_in=5
+        gaps_out=10
+        border_size=2
+
+        col.active_border=0xb3cba6f7
+        col.inactive_border=0xb3313244
+
+        apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
+    }
+
+    decoration {
+        rounding=5
+        blur=true
+        blur_size=10 # minimum 1
+        blur_passes=4 # minimum 1, more passes = more resource intensive.
+        blur_new_optimizations=true
+        # Your blur "amount" is blur_size * blur_passes, but high blur_size (over around 5-ish) will produce artifacts.
+        # if you want heavy blur, you need to up the blur_passes.
+        # the more passes, the more you can up the blur_size without noticing artifacts.
+    }
+
+    animations {
+        enabled=1
+        animation=windows,1,4,default
+        animation=border,1,10,default
+        animation=fade,1,10,default
+        animation=workspaces,1,4,default
+    }
+
+    dwindle {
+        pseudotile=0 # enable pseudotiling on dwindle
+        force_split=2
+    }
+
+    master {
+        new_is_master=false
+    }
+
+    gestures {
+        workspace_swipe=yes
+    }
+
+    misc {
+        disable_hyprland_logo=true
+        disable_splash_rendering=true
+        mouse_move_enables_dpms=true
+        no_vfr=false
+    }
+
+    windowrule=float,blueman
+    windowrule=float,Anydesk
+    windowrule=float,file_progress
+    windowrule=float,confirm
+    windowrule=float,dialog
+    windowrule=float,download
+    windowrule=float,notification
+    windowrule=float,error
+    windowrule=float,splash
+    windowrule=float,confirmreset
+    windowrule=float,title:Open File
+    windowrule=float,title:branchdialog
+    windowrule=float,minecraft-launcher
+
+    blurls=gtk-layer-shell
+    blurls=lockscreen
+
+    bind=SUPER,T,exec,kitty
+    bind=SUPER,B,exec,firefox
+    bind=SUPER,E,exec,thunar
+    bind=SUPER,Q,killactive,
+    bind=SUPERSHIFT,Q,exec,hyprctl kill
+    bind=SUPERCTRL,Q,exit,
+    bind=SUPER,V,togglefloating,
+    bind=SUPER,F,fullscreen,
+    bind=SUPER,A,exec,wofi --show drun -I -m -i
+    bind=SUPER,P,exec,${config.xdg.configHome}/hypr/scripts/logout.sh
+    bind=SUPERSHIFT,B,exec,${config.xdg.configHome}/hypr/scripts/toggle_bluetooth.sh
+
+    bind=SUPER,hebrew_aleph,exec,kitty
+    bind=SUPER,hebrew_nun,exec,firefox
+    bind=SUPER,hebrew_kuf,exec,thunar
+    bind=SUPER,slash,killactive,
+    bind=SUPERSHIFT,slash,exec,hyprctl kill
+    bind=SUPERSHIFT,slash,exit,
+    bind=SUPER,hebrew_he,togglefloating,
+    bind=SUPER,hebrew_kaph,fullscreen,
+    bind=SUPER,hebrew_shin,exec,wofi --show drun -I -m -i
+    bind=SUPER,hebrew_pe,exec,${config.xdg.configHome}/hypr/scripts/logout.sh
+    bind=SUPERSHIFT,hebrew_nun,exec,${config.xdg.configHome}/hypr/scripts/toggle_bluetooth.sh
+
+    bind=ALT,Space,exec,wofi-emoji
+    bind=ALT,C,exec,wofi-calc
+    bind=ALT,hebrew_bet,exec,wofi-calc
+
+    bind=,Print,exec,grim -g "$(slurp)" ${config.xdg.userDirs.pictures}/Screenshots/$(date +'%s.png')
+    bind=SHIFT,Print,exec,grim ${config.xdg.userDirs.pictures}/Screenshots/$(date +'%s.png')
+
+    bind=SUPER,C,exec,${config.xdg.configHome}/hypr/scripts/caffeine.sh
+    bind=SUPER,hebrew_bet,exec,${config.xdg.configHome}/hypr/scripts/caffeine.sh
+
+    bind=SUPER,H,movefocus,l
+    bind=SUPER,J,movefocus,d
+    bind=SUPER,K,movefocus,u
+    bind=SUPER,L,movefocus,r
+
+    bind=SUPERSHIFT,H,movewindow,l
+    bind=SUPERSHIFT,J,movewindow,d
+    bind=SUPERSHIFT,K,movewindow,u
+    bind=SUPERSHIFT,L,movewindow,r
+
+    bind=SUPERCTRL,L,resizeactive,70 0
+    bind=SUPERCTRL,H,resizeactive,-70 0
+    bind=SUPERCTRL,K,resizeactive,0 -70
+    bind=SUPERCTRL,J,resizeactive,0 70
+
+
+    bind=SUPER,hebrew_yod,movefocus,l
+    bind=SUPER,hebrew_chet,movefocus,d
+    bind=SUPER,hebrew_lamed,movefocus,u
+    bind=SUPER,hebrew_finalkaf,movefocus,r
+
+    bind=SUPERSHIFT,hebrew_yod,movewindow,l
+    bind=SUPERSHIFT,hebrew_chet,movewindow,d
+    bind=SUPERSHIFT,hebrew_lamed,movewindow,u
+    bind=SUPERSHIFT,hebrew_finalkaf,movewindow,r
+
+    bind=SUPERCTRL,hebrew_yod,resizeactive,70 0
+    bind=SUPERCTRL,hebrew_chet,resizeactive,-70 0
+    bind=SUPERCTRL,hebrew_lamed,resizeactive,0 -70
+    bind=SUPERCTRL,hebrew_finalkaf,resizeactive,0 70
+
+    bind=SUPERSHIFT,P,pseudo
+
+    bind=SUPER,Space,layoutmsg,swapwithmaster
+
+    bind=SUPER,comma,splitratio,-0.1
+    bind=SUPER,period,splitratio,+0.1
+
+    bind=SUPER,hebrew_taw,splitratio,-0.1
+    bind=SUPER,hebrew_finalzade,splitratio,+0.1
+
+    bind=SUPER,I,workspace,-1
+    bind=SUPER,O,workspace,+1
+    bind=SUPERSHIFT,I,movetoworkspace,-1
+    bind=SUPERSHIFT,O,movetoworkspace,+1
+
+    # bind=SUPER,backslash,swapactiveworkspaces,eDP1
+
+    bind=SUPER,hebrew_finalnun,workspace,-1
+    bind=SUPER,hebrew_finalmem,workspace,+1
+    bind=SUPERSHIFT,hebrew_finalnun,movetoworkspace,-1
+    bind=SUPERSHIFT,hebrew_finalmem,movetoworkspace,+1
+
+    bind=,XF86AudioRaiseVolume,exec,${config.xdg.configHome}/hypr/scripts/volume_ctl.sh up
+    bind=,XF86AudioLowerVolume,exec,${config.xdg.configHome}/hypr/scripts/volume_ctl.sh down
+    bind=,XF86AudioMute,exec,${config.xdg.configHome}/hypr/scripts/volume_ctl.sh mute
+
+    bind=SUPER,semicolon,exec,playerctl play-pause
+    bind=SUPER,hebrew_finalpe,exec,playerctl play-pause
+    bind=SUPER,bracketleft,exec,playerctl next
+    bind=SUPER,bracketright,exec,playerctl previous
+
+    bind=SUPER,1,workspace,1
+    bind=SUPER,2,workspace,2
+    bind=SUPER,3,workspace,3
+    bind=SUPER,4,workspace,4
+    bind=SUPER,5,workspace,5
+    bind=SUPER,6,workspace,6
+    bind=SUPER,7,workspace,7
+    bind=SUPER,8,workspace,8
+    bind=SUPER,9,workspace,9
+    bind=SUPER,0,workspace,10
+
+    bind=SUPERSHIFT,1,movetoworkspace,1
+    bind=SUPERSHIFT,2,movetoworkspace,2
+    bind=SUPERSHIFT,3,movetoworkspace,3
+    bind=SUPERSHIFT,4,movetoworkspace,4
+    bind=SUPERSHIFT,5,movetoworkspace,5
+    bind=SUPERSHIFT,6,movetoworkspace,6
+    bind=SUPERSHIFT,7,movetoworkspace,7
+    bind=SUPERSHIFT,8,movetoworkspace,8
+    bind=SUPERSHIFT,9,movetoworkspace,9
+    bind=SUPERSHIFT,0,movetoworkspace,10
+
+    bind=SUPER,mouse_down,workspace,e-1
+    bind=SUPER,mouse_up,workspace,e+1
+    bindm=SUPER,mouse:272,movewindow
+    bindm=SUPER,mouse:273,resizewindow
+  '';
+}

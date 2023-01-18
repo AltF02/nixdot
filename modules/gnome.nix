@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.dash-to-dock
     gnome.gnome-tweaks
+    xdg-desktop-portal-gtk
   ];
 
   environment.gnome.excludePackages = with pkgs; [
