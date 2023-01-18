@@ -24,11 +24,16 @@
         efiSysMountPoint = "/boot";
       };
       grub = {
-        devices = [ fileSystems."/boot".device ];
+        devices = [ "/dev/disk/by-uuid/374D-5C0E" ];
         enable = true;
         efiSupport = true;
         version = 2;
         useOSProber = true;
+
+        catppuccin = {
+         enable = true;
+         palette = "mocha";
+        };
       };
     };
   };
