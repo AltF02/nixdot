@@ -46,8 +46,8 @@
     "net.core.default_qdisc" = "cake";
   };
 
-  environment.memoryAllocator.provider = lib.mkDefault "scudo";
-  environment.variables.SCUDO_OPTIONS = lib.mkDefault "ZeroContents=1";
+  #environment.memoryAllocator.provider = lib.mkDefault "scudo";
+  #environment.variables.SCUDO_OPTIONS = lib.mkDefault "ZeroContents=1";
 
   boot.blacklistedKernelModules = [
     # Obscure network protocols
