@@ -24,7 +24,7 @@
         efiSysMountPoint = "/boot";
       };
       grub = {
-        devices = [ "/dev/disk/by-id/nvme-eui.002538d511b269b1" ];
+        devices = [ "nodev" ];
         enable = true;
         efiSupport = true;
         version = 2;
