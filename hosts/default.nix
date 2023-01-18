@@ -19,6 +19,7 @@
           ../modules/desktop.nix
           ../modules/xserver.nix
           ../modules/yubikey.nix
+          ../modules/plymouth.nix
           {home-manager.users.matt.imports = homeImports."matt@saturn";}
         ]
         ++ sharedModules
