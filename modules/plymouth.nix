@@ -5,9 +5,7 @@
 } @ args: {
   boot.plymouth = {
     enable = true;
-    catppuccin= {
-      enable = true;
-      palette = "mocha";
-    };
+    themePackages = [ inputs.catppuccin.packages.${pkgs.system}.catppuccin-plymouth ];
+    theme = "catppuccin-mocha";
   };
 }
