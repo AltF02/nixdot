@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1673821400,
-        "narHash": "sha256-fSNWLXuWFXV0pPSdp43bJ+Hnj2LI7dJ5Q6HBaVSHIt4=",
+        "lastModified": 1674040802,
+        "narHash": "sha256-MfJbopnCSAVtOpOS91wzR5sg+MUef9Ld6lL5pl6e4c8=",
         "ref": "main",
-        "rev": "01be50865bc5bd2b509dec8b18b64903a9d41265",
-        "revCount": 25,
+        "rev": "078ad778542e45d0844d3dd371dbb9da76fdb3f1",
+        "revCount": 27,
         "type": "git",
         "url": "https://codeberg.org/matthew/nix-catppuccin.git"
       },
@@ -268,11 +268,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1674031076,
-        "narHash": "sha256-GYogrIN4qw4p8zGzrHieJcoHHp3I23F3QJZ54D0hMMI=",
+        "lastModified": 1674039296,
+        "narHash": "sha256-VkhsLIKY/evIu/FRB9ughThrjva0YfJ8N8C0IYCJRPg=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "31ab2349f9f0cad25c9804b5a585617d04cb2a43",
+        "rev": "32c11bb212dd88e4fe8e573f35649448f7d8911c",
         "type": "github"
       },
       "original": {
