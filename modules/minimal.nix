@@ -27,7 +27,7 @@
 
     networkmanager = {
       enable = true;
-      dns = "unbound";
+      dns = "systemd-resolved";
       dhcp = "dhcpcd";
 
       ethernet.macAddress = "random";
