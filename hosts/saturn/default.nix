@@ -24,15 +24,15 @@
         efiSysMountPoint = "/boot";
       };
       grub = {
-        devices = [ "nodev" ];
+        devices = ["nodev"];
         enable = true;
         efiSupport = true;
         version = 2;
         useOSProber = true;
 
         catppuccin = {
-         enable = true;
-         palette = "mocha";
+          enable = true;
+          palette = "mocha";
         };
       };
     };

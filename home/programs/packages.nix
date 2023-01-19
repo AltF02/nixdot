@@ -26,7 +26,7 @@
 
     # compilers
     rustup
-    clang 
+    clang
 
     # productivity
     obsidian
