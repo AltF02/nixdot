@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://codeberg.org/matthew/nixdot">
-        <img align="center" alt="Get it on Codeberg" src="https://get-it-on.codeberg.org/get-it-on-white-on-black.svg" height="50">
+        <img align="center" alt="Get it on Codeberg" src="https://codeberg.org/matthew/codeberg-catppuccin/raw/branch/main/codeberg-catppuccin.svg" height="50">
     </a>
 </p>
 
