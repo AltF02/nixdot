@@ -11,6 +11,7 @@
     duf
     fd
     ripgrep
+    nvtop
 
     # file managers
     joshuto

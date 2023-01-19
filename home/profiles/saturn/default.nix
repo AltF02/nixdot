@@ -3,8 +3,9 @@
     ../../editors/helix
     ../../programs
     ../../wayland
+    ../../wayland/nvidia.nix
     ../../terminals/gnome-terminal.nix
   ];
 
-  catppuccin.theme = "mocha";
+  catppuccin.palette = "mocha";
 }

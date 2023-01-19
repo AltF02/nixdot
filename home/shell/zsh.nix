@@ -47,7 +47,7 @@
 
     shellAliases = {
       cat = "bat -pp";
-      upd = "sudo nixos-rebuild switch --upgrade";
+      upd = "doas nixos-rebuild switch --upgrade";
     };
     shellGlobalAliases = {exa = "exa --icons --git";};
   };

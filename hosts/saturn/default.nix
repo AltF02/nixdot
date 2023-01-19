@@ -19,9 +19,22 @@
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     loader = {
-      # systemd-boot on UEFI
-      efi.canTouchEfiVariables = true;
-      systemd-boot.enable = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+      grub = {
+        devices = ["nodev"];
+        enable = true;
+        efiSupport = true;
+        version = 2;
+        useOSProber = true;
+
+        catppuccin = {
+          enable = true;
+          palette = "mocha";
+        };
+      };
     };
   };
 
@@ -33,13 +46,6 @@
     };
 
     cpu.amd.updateMicrocode = true;
-
-    nvidia = {
-      # use beta drivers
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-      # required for wayland
-      modesetting.enable = true;
-    };
   };
 
   networking = {
@@ -62,10 +68,8 @@
     fstrim.enable = true;
 
     # see https://github.com/fufexan/nix-gaming/#pipewire-low-latency
-    pipewire.lowLatency.enable = true;
+    #pipewire.lowLatency.enable = true;
 
     printing.enable = true;
-
-    xserver.videoDrivers = ["nvidia"];
   };
 }

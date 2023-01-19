@@ -7,6 +7,8 @@
 }:
 # configuration shared by all hosts
 {
+  environment.systemPackages = [pkgs.busybox];
+
   # enable zsh autocompletion for system packages (systemd, etc)
   environment.pathsToLink = ["/share/zsh"];
 
@@ -25,7 +27,11 @@
 
     networkmanager = {
       enable = true;
-      # dns = "systemd-resolved";
+      dns = "unbound";
+      dhcp = "dhcpcd";
+
+      ethernet.macAddress = "random";
+      wifi.macAddress = "random";
     };
   };
 
@@ -55,7 +61,7 @@
     };
 
     # DNS resolver
-    # resolved.enable = true;
+    unbound.enable = true;
 
     # inter-machine VPN
     tailscale.enable = true;
