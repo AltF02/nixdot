@@ -75,7 +75,7 @@
     fstrim.enable = true;
 
     # see https://github.com/fufexan/nix-gaming/#pipewire-low-latency
-    pipewire.lowLatency.enable = true;
+    #pipewire.lowLatency.enable = true;
 
     printing.enable = true;
 
