@@ -3,6 +3,7 @@
     ../../editors/helix
     ../../programs
     ../../wayland
+    ../../wayland/nvidia.nix
     ../../terminals/gnome-terminal.nix
   ];
 
