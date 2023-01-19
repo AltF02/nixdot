@@ -46,13 +46,6 @@
     };
 
     cpu.amd.updateMicrocode = true;
-
-    nvidia = {
-      # use beta drivers
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-      # required for wayland
-      modesetting.enable = true;
-    };
   };
 
   networking = {
@@ -78,7 +71,5 @@
     #pipewire.lowLatency.enable = true;
 
     printing.enable = true;
-
-    xserver.videoDrivers = ["nvidia"];
   };
 }
