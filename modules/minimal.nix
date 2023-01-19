@@ -27,7 +27,11 @@
 
     networkmanager = {
       enable = true;
-      # dns = "systemd-resolved";
+      dns = "unbound";
+      dhcp = "dhcpcd";
+
+      ethernet.macAddress = "random";
+      wifi.macAddress = "random";
     };
   };
 
