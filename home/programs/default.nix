@@ -32,10 +32,12 @@
     };
   };
 
-  services = {
-    gpg-agent = {
+  programs = {
+    gpg.agent = {
       enable = true;
       enableSshSupport = true;
+      enableBrowserSocket = true;
+      pinentryFlavor = "gnome3";
     };
   };
 }
