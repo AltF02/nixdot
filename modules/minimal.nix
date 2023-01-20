@@ -23,7 +23,7 @@
 
   networking.networkmanager = {
     enable = true;
-    dns = "resolved";
+    dns = "systemd-resolved";
     dhcp = "dhcpcd";
 
     ethernet.macAddress = "random";
