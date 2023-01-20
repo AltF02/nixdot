@@ -46,8 +46,7 @@
     "net.core.default_qdisc" = "cake";
   };
 
-  #environment.memoryAllocator.provider = lib.mkDefault "scudo";
-  #environment.variables.SCUDO_OPTIONS = lib.mkDefault "ZeroContents=1";
+  environment.memoryAllocator.provider = lib.mkDefault "graphene-hardened";
 
   boot.blacklistedKernelModules = [
     # Obscure network protocols
@@ -80,4 +79,22 @@
   ];
 
   boot.kernelModules = ["tcp_bbr"];
+
+  # https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/751#note_995638
+  systemd.services.NetworkManager.serviceConfig = {
+    ProtectHome = "true";
+    PrivateTmp = "true";
+
+    ProtectProc = "invisible";
+    ProtectControlGroups = "true";
+    ProtectKernelLogs = "true";
+
+    RestrictNamespaces = "true";
+    NoNewPrivileges = "true";
+    RestrictRealtime = "true";
+    RestrictSUIDSGID = "true";
+
+    LockPersonality = "true";
+    MemoryDenyWriteExecute = "true";
+  };
 }
