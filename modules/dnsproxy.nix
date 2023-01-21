@@ -1,8 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   systemd.services.dnsproxy = {
     description = "Simple DNS proxy";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
+    after = ["network.target"];
+    wantedBy = ["multi-user.target"];
 
     serviceConfig = {
       PermissionsStartOnly = true;
@@ -12,10 +16,10 @@
       AmbientCapabilities = "cap_net_bind_service";
       NoNewPrivileges = true;
       DynamicUser = true;
-      ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -u quic://${networking.hostname}-1bce38.dns.nextdns.io -p 5353";
+      ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -u quic://${config.networking.hostName}-1bce38.dns.nextdns.io -p 5353";
       Restart = "on-failure";
     };
   };
 
-  networking.nameservers = [ "127.0.0.1:5353" ];
+  networking.nameservers = ["127.0.0.1:5353"];
 }

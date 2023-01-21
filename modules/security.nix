@@ -46,7 +46,7 @@
     "net.core.default_qdisc" = "cake";
   };
 
-#  environment.memoryAllocator.provider = lib.mkDefault "graphene-hardened";
+  #  environment.memoryAllocator.provider = lib.mkDefault "graphene-hardened";
 
   boot.blacklistedKernelModules = [
     # Obscure network protocols
