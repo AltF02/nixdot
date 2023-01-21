@@ -31,13 +31,4 @@
       homedir = "${config.xdg.dataHome}/gnupg";
     };
   };
-
-  programs = {
-    gpg.agent = {
-      enable = true;
-      enableSshSupport = true;
-      enableBrowserSocket = true;
-      pinentryFlavor = "gnome3";
-    };
-  };
 }
