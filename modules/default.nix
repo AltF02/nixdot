@@ -20,6 +20,7 @@ in {
         sharedModules = [
           {home-manager.useGlobalPkgs = true;}
           inputs.hm.nixosModule
+          ./dnsproxy.nix
           ./minimal.nix
           module_args
           ./nix.nix
