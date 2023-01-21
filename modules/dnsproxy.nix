@@ -16,10 +16,10 @@
       AmbientCapabilities = "cap_net_bind_service";
       NoNewPrivileges = true;
       DynamicUser = true;
-      ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -u quic://${config.networking.hostName}-1bce38.dns.nextdns.io -p 5353";
+      ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -l 127.0.0.1 -u quic://${config.networking.hostName}-1bce38.dns.nextdns.io";
       Restart = "on-failure";
     };
   };
 
-  networking.nameservers = ["127.0.0.1:5353"];
+  networking.nameservers = ["127.0.0.1"];
 }
