@@ -8,6 +8,7 @@
     ../shell/nix.nix
     ./files
     ./git.nix
+    ./gpg.nix
     ./gtk.nix
     ./flatpak.nix
     ./packages.nix
@@ -24,27 +25,6 @@
           "dom.security.https_only_mode" = true;
         };
       };
-    };
-
-    gpg = {
-      enable = true;
-      homedir = "${config.xdg.dataHome}/gnupg";
-    };
-  };
-
-  services = {
-    gpg-agent = {
-      enable = true;
-      enableSshSupport = true;
-      enableExtraSocket = true;
-
-      defaultCacheTtl = 60;
-      maxCacheTtl = 120;
-
-      defaultCacheTtlSsh = 60;
-      maxCacheTtlSsh = 120;
-
-      pinentryFlavor = "gnome3";
     };
   };
 }
