@@ -15,7 +15,6 @@
 
     # misc
     vim
-    keepassxc
 
     # audio
     easyeffects
