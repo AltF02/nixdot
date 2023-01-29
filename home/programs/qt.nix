@@ -6,6 +6,7 @@
   home.packages = [pkgs.adwaita-qt];
 
   qt = {
-    style.name = "adwaita-dark";
+    enable = true;
+    platformTheme = "gnome";
   };
 }
