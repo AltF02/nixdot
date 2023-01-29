@@ -3,5 +3,8 @@
   config,
   ...
 }: {
-  qt.platformTheme = "gnome";
+  qt = {
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 }
