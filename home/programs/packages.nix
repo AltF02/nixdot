@@ -15,6 +15,9 @@
 
     # misc
     vim
+    
+    # gaming
+    prismlauncher
 
     # audio
     easyeffects
