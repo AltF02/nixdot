@@ -11,6 +11,7 @@
     ./gtk.nix
     ./flatpak.nix
     ./packages.nix
+    ./qt.nix
     ./xdg.nix
     ./yubikey.nix
   ];
