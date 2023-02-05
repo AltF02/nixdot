@@ -79,22 +79,4 @@
   ];
 
   boot.kernelModules = ["tcp_bbr"];
-
-  # https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/751#note_995638
-  systemd.services.NetworkManager.serviceConfig = {
-    ProtectHome = "true";
-    PrivateTmp = "true";
-
-    ProtectProc = "invisible";
-    ProtectControlGroups = "true";
-    ProtectKernelLogs = "true";
-
-    RestrictNamespaces = "true";
-    NoNewPrivileges = "true";
-    RestrictRealtime = "true";
-    RestrictSUIDSGID = "true";
-
-    LockPersonality = "true";
-    MemoryDenyWriteExecute = "true";
-  };
 }
