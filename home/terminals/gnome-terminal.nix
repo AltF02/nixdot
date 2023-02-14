@@ -6,7 +6,7 @@
       cursorShape = "ibeam";
       customCommand = "zsh";
       default = true;
-      font = "MesloLGS NF 11";
+      font = "FiraCode Nerd Font Mono 11";
       loginShell = true;
       visibleName = "p10k";
     };

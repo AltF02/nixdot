@@ -6,7 +6,9 @@
   programs.helix = {
     enable = true;
     package = inputs.helix.packages.${pkgs.system}.default;
+    
     catppuccin.enable = true;
+    
     settings = {
       editor = {
         line-number = "relative";
@@ -34,7 +36,6 @@
       keys.insert = {
         "A-x" = "normal_mode";
       };
-      
     };
   };
 }
