@@ -18,4 +18,6 @@
   };
 
   services.xserver.videoDrivers = ["nvidia"];
+
+  programs.hyprland.nvidiaPatches = true;
 }

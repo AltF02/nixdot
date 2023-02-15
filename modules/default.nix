@@ -28,6 +28,7 @@ in {
         ];
 
         desktopModules = with inputs; [
+          hyprland.nixosModules.default
           nix-gaming.nixosModules.default
           catppuccin.nixosModules.default
         ];

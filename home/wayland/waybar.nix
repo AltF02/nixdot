@@ -29,7 +29,7 @@
             disable-scroll = true;
             all-outputs = true;
             on-click = "activate";
-            persistent_workspaces" = {
+            persistent_workspaces = {
               "1" = [];
               "2" = [];
               "3" = [];
@@ -44,7 +44,7 @@
           };
           "custom/caffeine" = {
             exec = "${config.xdg.configHome}/waybar/scripts/caffeine.sh";
-            "return-type" = "json";
+            return-type = "json";
             interval = 3;
             "format-icons" = [
               "\ufbc8"

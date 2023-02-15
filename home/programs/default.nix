@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../shell/nix.nix
-    ./files
     ./git.nix
     ./gtk.nix
     ./flatpak.nix

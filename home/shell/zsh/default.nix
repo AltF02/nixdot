@@ -51,4 +51,6 @@
     };
     shellGlobalAliases = {exa = "exa --icons --git";};
   };
+
+  home.file.".config/zsh/.p10k.zsh".text = builtins.readFile ./p10k.zsh;
 }

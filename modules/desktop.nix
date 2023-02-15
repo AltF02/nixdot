@@ -24,9 +24,11 @@
 
   nix.settings = {
     substituters = [
+      "https://hyprland.cachix.org"
       "https://nix-gaming.cachix.org"
     ];
     trusted-public-keys = [
+      "yprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
     ];
   };
@@ -60,6 +62,17 @@
     udev.packages = with pkgs; [gnome.gnome-settings-daemon];
 
     flatpak.enable = true;
+  };
+
+  environment.etc = {
+  	"wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
+      bluez_monitor.properties = {
+        ["bluez5.enable-sbc-xq"] = true,
+        ["bluez5.enable-msbc"] = true,
+        ["bluez5.enable-hw-volume"] = true,
+        ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+      }
+    '';
   };
 
   security = {

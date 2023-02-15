@@ -18,11 +18,6 @@
     GDK_SCALE = "2";
   };
 
-  home.file.".config" = {
-    source = ./config;
-    recursive = true;
-  };
-
   # screen idle
   services.swayidle = {
     enable = true;

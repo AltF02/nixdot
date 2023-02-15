@@ -12,6 +12,7 @@
   ];
 
   desktopModules = with inputs; [
+    hyprland.homeManagerModules.default
     catppuccin.desktopModules.default
   ];
 

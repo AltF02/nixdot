@@ -8,7 +8,7 @@
 # Wayland config
 {
   imports = [
-    ../programs/waybar.nix
+    ./waybar.nix
     ./hyprland
   ];
 
@@ -21,7 +21,7 @@
     swaybg
 
     # utils
-    ocrScript
+    # ocrScript
     wf-recorder
     wl-clipboard
     wlogout
