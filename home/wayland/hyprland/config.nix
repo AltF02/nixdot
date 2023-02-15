@@ -13,14 +13,16 @@
 in {
   wayland.windowManager.hyprland.extraConfig = ''
     # scale apps
-    exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-    exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-    exec-once=wlsunset -S 6:00 -s 18:30
+    exec-once = xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
+
     exec-once=waybar
     exec-once=blueman-applet
     exec-once=dunst
     exec-once=udev-block-notify
-    exec-once=${config.xdg.configHome}/hypr/scripts/sleep.sh
+    
+    
+    # exec-once=${config.xdg.configHome}/hypr/scripts/sleep.sh
+    
     exec-once=echo us > /tmp/kb_layout
     exec-once=hyprctl setcursor ${pointer.name} ${toString pointer.size}
 
@@ -90,6 +92,9 @@ in {
         disable_hyprland_logo=true
         disable_splash_rendering=true
         mouse_move_enables_dpms=true
+
+        disable_autoreload=true
+                
         vfr=true
     }
 
@@ -110,9 +115,9 @@ in {
     blurls=gtk-layer-shell
     blurls=lockscreen
 
-    bind=SUPER,T,exec,kitty
+    bind=SUPER,T,exec,alacritty 
     bind=SUPER,B,exec,firefox
-    bind=SUPER,E,exec,thunar
+    bind=SUPER,E,exec,thunderbird
     bind=SUPER,Q,killactive,
     bind=SUPERSHIFT,Q,exec,hyprctl kill
     bind=SUPERCTRL,Q,exit,
@@ -122,7 +127,7 @@ in {
     bind=SUPER,P,exec,${config.xdg.configHome}/hypr/scripts/logout.sh
     bind=SUPERSHIFT,B,exec,${config.xdg.configHome}/hypr/scripts/toggle_bluetooth.sh
 
-    bind=SUPER,hebrew_aleph,exec,kitty
+    bind=SUPER,hebrew_aleph,exec,ala
     bind=SUPER,hebrew_nun,exec,firefox
     bind=SUPER,hebrew_kuf,exec,thunar
     bind=SUPER,slash,killactive,

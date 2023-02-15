@@ -53,7 +53,6 @@
   };
 
   programs = {
-    hyprland.xwayland.hidpi = false;
     xwayland.enable = true;
   };
 
