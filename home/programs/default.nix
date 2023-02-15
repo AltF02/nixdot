@@ -11,6 +11,7 @@
     ./gtk.nix
     ./flatpak.nix
     ./packages.nix
+    ./qt.nix
     ./xdg.nix
     ./yubikey.nix
   ];
@@ -36,6 +37,15 @@
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
+      enableExtraSocket = true;
+
+      defaultCacheTtl = 60;
+      maxCacheTtl = 120;
+
+      defaultCacheTtlSsh = 60;
+      maxCacheTtlSsh = 120;
+
+      pinentryFlavor = "gnome3";
     };
   };
 }

@@ -6,8 +6,8 @@
   environment.systemPackages = [pkgs.cudatoolkit];
 
   hardware.nvidia = {
-    # use beta drivers
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    # use stable drivers
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     # required for wayland
     modesetting.enable = true;
   };

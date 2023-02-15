@@ -1,4 +1,10 @@
-<h1 align="center">Matthew/nixdot</h1>
+<h1 align="center">Matthew/nixdot</h1> 
+
+<p align="center">
+    <a href="https://codeberg.org/matthew/nixdot">
+        <img align="center" alt="Get it on Codeberg" src="https://codeberg.org/matthew/codeberg-catppuccin/raw/branch/main/codeberg-catppuccin.svg" height="50">
+    </a>
+</p>
 
 # 🗒 About
 

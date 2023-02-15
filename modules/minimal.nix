@@ -21,18 +21,13 @@
   # graphics drivers / HW accel
   hardware.opengl.enable = true;
 
-  networking = {
-    # required to connect to Tailscale exit nodes
-    firewall.checkReversePath = "loose";
+  networking.networkmanager = {
+    enable = true;
+    dns = "systemd-resolved";
+    dhcp = "dhcpcd";
 
-    networkmanager = {
-      enable = true;
-      dns = "unbound";
-      dhcp = "dhcpcd";
-
-      ethernet.macAddress = "random";
-      wifi.macAddress = "random";
-    };
+    ethernet.macAddress = "random";
+    wifi.macAddress = "random";
   };
 
   # pickup pkgs from flake export
@@ -57,14 +52,11 @@
   services = {
     openssh = {
       enable = true;
-      useDns = true;
+      settings.UseDns = true;
     };
 
     # DNS resolver
-    unbound.enable = true;
-
-    # inter-machine VPN
-    tailscale.enable = true;
+    resolved.enable = true;
   };
 
   # don't touch this

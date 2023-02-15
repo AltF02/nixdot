@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # office
-    libreoffice
+    # libreoffice
 
     # let discord open links
     xdg-utils
@@ -15,6 +15,9 @@
 
     # misc
     vim
+    
+    # gaming
+    prismlauncher
 
     # audio
     easyeffects
