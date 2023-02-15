@@ -90,7 +90,7 @@ in {
         disable_hyprland_logo=true
         disable_splash_rendering=true
         mouse_move_enables_dpms=true
-        no_vfr=false
+        vfr=true
     }
 
     windowrule=float,blueman
