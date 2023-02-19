@@ -10,6 +10,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     # required for wayland
     modesetting.enable = true;
+    powerManagement = {
+      enable = true;
+      finegrained = true;
+    };
   };
 
   systemd.services.nvidia-control-devices = {
