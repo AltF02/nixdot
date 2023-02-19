@@ -18,7 +18,7 @@
   networking = {
     firewall = {
       # GTA
-      allowedTCPPorts = [6672 61455 61457 61456 61458];
+      allowedUDPPorts = [6672 61455 61457 61456 61458];
     };
   };
 
