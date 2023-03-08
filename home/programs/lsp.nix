@@ -7,5 +7,5 @@
     nil
     rust-analyzer
     vls
-  ]
+  ];
 }
