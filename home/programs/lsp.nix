@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     delve
     gopls
-    lldb-vscode
+    lldb
     nil
     rust-analyzer
     vls
