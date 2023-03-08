@@ -10,6 +10,6 @@
     lldb
     nil
     rust-analyzer
-    vls
+    nodePackages_latest.vls
   ];
 }
