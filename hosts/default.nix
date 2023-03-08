@@ -15,6 +15,7 @@
         [
           ./saturn
           ../modules/doas.nix
+          ../modules/gaming.nix
           ../modules/gnome.nix
           ../modules/desktop.nix
           ../modules/nvidia.nix
