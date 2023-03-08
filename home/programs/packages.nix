@@ -15,7 +15,7 @@
 
     # misc
     vim
-    
+
     # gaming
     prismlauncher
 
