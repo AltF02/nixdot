@@ -10,6 +10,7 @@
     ./git.nix
     ./gtk.nix
     ./flatpak.nix
+    ./lsp.nix
     ./packages.nix
     ./qt.nix
     ./xdg.nix
