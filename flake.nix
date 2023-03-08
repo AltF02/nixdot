@@ -36,17 +36,26 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
 
-    devshell.url = "github:numtide/devshell";
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     fu.url = "github:numtide/flake-utils";
 
-    helix.url = "github:SoraTenshi/helix/experimental-22.12";
-
-    hm = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+    helix = {
+      url = "github:SoraTenshi/helix/daily-driver";
+      inputs.parts.follows = "flake-parts";
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
