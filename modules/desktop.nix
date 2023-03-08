@@ -17,8 +17,8 @@
 
   networking = {
     firewall = {
-      # Spotify track sync with other devices
-      allowedTCPPorts = [57621];
+      # GTA
+      allowedUDPPorts = [6672 61455 61457 61456 61458];
     };
   };
 
