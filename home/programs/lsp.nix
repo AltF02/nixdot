@@ -5,7 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    dlv
+    delve
     gopls
     lldb-vscode
     nil
