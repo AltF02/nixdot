@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  browser = ["firefox.desktop"];
+  browser = ["librewolf.desktop"];
 
   # XDG MIME types
   associations = {
