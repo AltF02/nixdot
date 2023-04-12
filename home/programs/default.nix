@@ -1,15 +1,12 @@
-{
-  pkgs,
-  config,
-  inputs,
-  ...
-}: {
+{config, ...}: {
   imports = [
     ../shell/nix.nix
     ./files
     ./git.nix
     ./gtk.nix
+    ./firefox.nix
     ./flatpak.nix
+    ./librewolf.nix
     ./lsp.nix
     ./packages.nix
     ./qt.nix
@@ -18,16 +15,6 @@
   ];
 
   programs = {
-    firefox = {
-      enable = true;
-      profiles.matt = {
-        settings = {
-          "browser.toolbars.bookmarks.visibility" = "always";
-          "dom.security.https_only_mode" = true;
-        };
-      };
-    };
-
     gpg = {
       enable = true;
       homedir = "${config.xdg.dataHome}/gnupg";
