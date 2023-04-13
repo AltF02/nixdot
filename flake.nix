@@ -63,9 +63,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     catppuccin = {
       url = "git+https://codeberg.org/matthew/nix-catppuccin.git?ref=main";
