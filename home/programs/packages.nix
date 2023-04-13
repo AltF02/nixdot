@@ -22,11 +22,6 @@
     # audio
     easyeffects
 
-    # programming
-    jetbrains.clion
-    jetbrains.rider
-    jetbrains.webstorm
-
     # compilers
     rustup
     clang
