@@ -26,9 +26,6 @@
     rustup
     clang
 
-    # productivity
-    obsidian
-
     # mail
     hydroxide
     thunderbird
