@@ -1,7 +1,5 @@
 {
   pkgs,
-  config,
-  lib,
   ...
 }: {
   home.packages = with pkgs; [
@@ -9,7 +7,7 @@
     gopls
     lldb
     nil
-    rust-analyzer
+    # rust-analyzer
     nodePackages_latest.vls
   ];
 }
