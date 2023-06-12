@@ -29,7 +29,7 @@
             disable-scroll = true;
             all-outputs = true;
             on-click = "activate";
-            persistent_workspaces" = {
+            "persistent_workspaces" = {
               "1" = [];
               "2" = [];
               "3" = [];

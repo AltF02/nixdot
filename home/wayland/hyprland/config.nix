@@ -19,10 +19,10 @@ in {
     exec-once=blueman-applet
     exec-once=dunst
     exec-once=udev-block-notify
-    
-    
+
+
     # exec-once=${config.xdg.configHome}/hypr/scripts/sleep.sh
-    
+
     exec-once=echo us > /tmp/kb_layout
     exec-once=hyprctl setcursor ${pointer.name} ${toString pointer.size}
 
@@ -94,7 +94,7 @@ in {
         mouse_move_enables_dpms=true
 
         disable_autoreload=true
-                
+
         vfr=true
     }
 
@@ -115,7 +115,7 @@ in {
     blurls=gtk-layer-shell
     blurls=lockscreen
 
-    bind=SUPER,T,exec,alacritty 
+    bind=SUPER,T,exec,alacritty
     bind=SUPER,B,exec,firefox
     bind=SUPER,E,exec,thunderbird
     bind=SUPER,Q,killactive,

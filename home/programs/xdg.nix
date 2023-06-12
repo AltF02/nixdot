@@ -9,7 +9,7 @@
     imageViewer = ["org.gnome.eog.desktop"];
     textEditor = ["org.gnome.TextEditor.desktop"];
   };
-  
+
   # XDG MIME types
   associations = {
     "application/json" = defaults.textEditor;
