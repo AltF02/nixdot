@@ -15,13 +15,6 @@
   # enable location service
   location.provider = "geoclue2";
 
-  networking = {
-    firewall = {
-      # GTA
-      allowedUDPPorts = [6672 61455 61457 61456 61458];
-    };
-  };
-
   nix.settings = {
     substituters = [
       "https://hyprland.cachix.org"

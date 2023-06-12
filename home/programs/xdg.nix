@@ -3,25 +3,37 @@
   pkgs,
   ...
 }: let
-  browser = ["firefox.desktop"];
-
+  defaults = {
+    browser = ["librewolf.desktop"];
+    videoPlayer = ["org.gnome.Totem.desktop"];
+    imageViewer = ["org.gnome.eog.desktop"];
+    textEditor = ["org.gnome.TextEditor.desktop"];
+  };
+  
   # XDG MIME types
   associations = {
-    "application/x-extension-htm" = browser;
-    "application/x-extension-html" = browser;
-    "application/x-extension-shtml" = browser;
-    "application/x-extension-xht" = browser;
-    "application/x-extension-xhtml" = browser;
-    "application/xhtml+xml" = browser;
-    "text/html" = browser;
-    "text/plain" = "org.gnome.TextEditor.desktop";
-    "x-scheme-handler/about" = browser;
-    "x-scheme-handler/ftp" = browser;
-    "x-scheme-handler/http" = browser;
-    "x-scheme-handler/https" = browser;
-    "x-scheme-handler/unknown" = browser;
-
-    "application/json" = browser;
+    "application/json" = defaults.textEditor;
+    "application/pdf" = defaults.browser;
+    "application/x-extension-htm" = defaults.browser;
+    "application/x-extension-html" = defaults.browser;
+    "application/x-extension-shtml" = defaults.browser;
+    "application/x-extension-xht" = defaults.browser;
+    "application/x-extension-xhtml" = defaults.browser;
+    "application/xhtml+xml" = defaults.browser;
+    "application/zip" = "org.gnome.FileRoller.desktop";
+    "image/gif" = defaults.imageViewer;
+    "image/jpeg" = defaults.imageViewer;
+    "image/png" = defaults.imageViewer;
+    "image/svg" = defaults.imageViewer;
+    "text/html" = defaults.browser;
+    "text/plain" = defaults.textEditor;
+    "video/mp4" = defaults.videoPlayer;
+    "video/quicktime" = defaults.videoPlayer;
+    "x-scheme-handler/about" = defaults.browser;
+    "x-scheme-handler/ftp" = defaults.browser;
+    "x-scheme-handler/http" = defaults.browser;
+    "x-scheme-handler/https" = defaults.browser;
+    "x-scheme-handler/unknown" = defaults.browser;
   };
 in {
   xdg = {
