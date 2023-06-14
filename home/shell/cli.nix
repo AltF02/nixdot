@@ -13,6 +13,11 @@
     ripgrep
     nvtop
 
+    # kubernetes
+    helm
+    kubectl
+    k9s
+
     # file managers
     joshuto
     ranger
