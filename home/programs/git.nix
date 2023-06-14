@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.gh pkgs.git-lfs];
+  home.packages = with pkgs; [gh glab git-lfs];
 
   programs.git = {
     enable = true;
@@ -13,5 +13,10 @@
 
     userEmail = "contact@altf2.dev";
     userName = "AltF2";
+
+    extraConfig = {
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
+    }; 
   };
 }
