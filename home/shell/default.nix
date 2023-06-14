@@ -7,6 +7,7 @@ in {
     ./cli.nix
     ./starship.nix
     ./transient-services.nix
+    ./zellij.nix
     ./zsh.nix
   ];
 
