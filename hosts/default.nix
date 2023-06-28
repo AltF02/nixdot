@@ -14,6 +14,7 @@
       modules =
         [
           ./saturn
+          ../modules/1password.nix
           ../modules/doas.nix
           ../modules/gaming.nix
           ../modules/gnome.nix
