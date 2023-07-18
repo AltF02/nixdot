@@ -29,6 +29,8 @@
     clang
     nodejs
     deno
+    gnumake
+    gcc
 
     # mail
     thunderbird
