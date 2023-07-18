@@ -26,7 +26,7 @@
 
     # compilers/interpreters
     rustup
-    clang
+    # clang
     nodejs
     deno
     gnumake
