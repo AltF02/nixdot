@@ -8,8 +8,7 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-    autocd = true;
+    syntaxHighlighting.enable = true;
     dotDir = ".config/zsh";
     history = {
       expireDuplicatesFirst = true;
