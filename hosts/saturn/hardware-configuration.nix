@@ -33,37 +33,37 @@
   fileSystems."/nix" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=nix" "compress-force=zstd" "noatime"];
+    options = ["subvol=nix" "compress=zstd" "noatime"];
   };
 
   fileSystems."/etc" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=etc" "compress-force=zstd" "noatime"];
+    options = ["subvol=etc" "compress=zstd" "noatime"];
   };
 
   fileSystems."/var/log" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=log" "compress-force=zstd" "noatime"];
+    options = ["subvol=log" "compress=zstd" "noatime"];
   };
 
   fileSystems."/var/lib" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=lib" "compress-force=zstd" "noatime"];
+    options = ["subvol=lib" "compress=zstd" "noatime"];
   };
 
   fileSystems."/root" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=root" "compress-force=zstd" "noatime"];
+    options = ["subvol=root" "compress=zstd" "noatime"];
   };
 
   fileSystems."/home" = {
     device = "/dev/mapper/nixos";
     fsType = "btrfs";
-    options = ["subvol=home" "compress-force=zstd"];
+    options = ["subvol=home" "compress=zstd" "noatime"];
   };
 
   swapDevices = [
