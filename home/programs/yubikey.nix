@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     pcsctools
 
-    yubikey-manager
+    # yubikey-manager
     yubikey-manager-qt
     yubikey-personalization
     yubikey-personalization-gui
