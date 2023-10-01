@@ -28,7 +28,7 @@ in {
         ];
 
         desktopModules = with inputs; [
-          nix-gaming.nixosModules.default
+          nix-gaming.nixosModules.pipewireLowLatency
           catppuccin.nixosModules.default
         ];
       };
