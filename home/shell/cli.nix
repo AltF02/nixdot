@@ -26,7 +26,7 @@
   programs = {
     bat.enable = true;
     btop.enable = true;
-    exa.enable = true;
+    eza.enable = true;
     ssh.enable = true;
   };
 }
