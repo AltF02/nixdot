@@ -3,8 +3,6 @@
   pkgs,
   ...
 }: {
-  environment.systemPackages = [pkgs.cudatoolkit];
-
   hardware.nvidia = {
     # use stable drivers
     package = config.boot.kernelPackages.nvidiaPackages.stable;
