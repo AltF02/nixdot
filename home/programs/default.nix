@@ -19,6 +19,8 @@
       enable = true;
       homedir = "${config.xdg.dataHome}/gnupg";
     };
+
+    direnv.enable = true;
   };
 
   services = {
